@@ -1,0 +1,32 @@
+<mat-card fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="start start" *ngFor="let item of results"
+  class="text-center mb-3 mr-3">
+  <mat-card-header>
+    <mat-card-title> {{title}}</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content class="w-100" fxFlex="100" fxLayout="row wrap">
+
+    <div class="mb-2" fxFlex="50" fxLayout="column">
+      <strong> Country</strong>
+      <span> {{item.venue.country}} </span>
+    </div>
+
+    <div class="mb-2" fxFlex="50" fxLayout="column">
+      <strong> City</strong>
+      <span> {{item.venue.city}} </span>
+    </div>
+
+    <div class="mb-2" fxFlex="50" fxLayout="column">
+      <strong> Venue</strong>
+      <span> {{item.venue.location}} </span>
+    </div>
+
+    <div class="mb-2" fxFlex="50" fxLayout="column">
+      <strong> Date</strong>
+      <span> {{item.datetime |date}} </span>
+
+    </div>
+
+  </mat-card-content>
+
+</mat-card>

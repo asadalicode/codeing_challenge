@@ -1,0 +1,21 @@
+  <div class="page-layout">
+    <form fxLayoutAlign="start center">
+      <mat-form-field appearance="outline" [ngClass]="isMobile?'w-100':'w-75'">
+        <input matInput placeholder="Search" [formControl]="searchFormControl">
+        <button mat-button matSuffix mat-icon-button aria-label="Search">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+    </form>
+
+    <div *ngIf="(result$ | async) as item; else noData" class="text pointer ">
+      <p> 1 result found for {{item.name}}</p>
+      <div class="outline" [routerLink]="['/','artist-events', item.name]">
+        <app-info-cards fxLayout="row wrap" fxLayoutAlign="start center" [results]="item"></app-info-cards>
+      </div>
+    </div>
+
+    <ng-template #noData>
+      <div> No data to display</div>
+    </ng-template>
+  </div>

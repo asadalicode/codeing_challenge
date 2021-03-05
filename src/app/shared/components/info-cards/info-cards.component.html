@@ -1,0 +1,7 @@
+<mat-card fxLayoutGap="15px" fxLayoutAlign="space-around center" class="text-center mb-3 mr-3">
+  <img class="img" [src]="results?.image_url? results?.image_url: results?.artist?.image_url" alt="">
+  <mat-card-content fxLayout="column" fxLayoutAlign="start start ">
+    <strong> {{results?.name? results?.name: results?.artist?.name}}</strong>
+    <span> {{results?.facebook_page_url? results?.facebook_page_url: results?.artist?.facebook_page_url}} </span>
+  </mat-card-content>
+</mat-card>

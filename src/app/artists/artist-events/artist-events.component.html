@@ -1,0 +1,19 @@
+<div class="page-layout" fxFlex="100" fxLayout="column" fxLayoutGap="30px" *ngIf="artistDetails$ | async as results">
+  <div class="text " fxLayoutAlign="start center">
+    <span [routerLink]="['/','artist-search']" role="button" fxLayoutAlign="start center">
+      <mat-icon>keyboard_arrow_left</mat-icon> &nbsp; Back to results
+    </span>
+  </div>
+
+  <app-info-cards *ngIf="results?.length>0" fxLayout="row wrap" fxLayoutAlign="start center" [results]="results[0]">
+  </app-info-cards>
+
+  <div class="text">
+    {{results.length}} upcoming events
+  </div>
+
+  <app-detail-cards *ngIf="results?.length>0" fxLayout="row wrap" fxLayoutAlign="start center" [results]="results"
+    [title]="'Event Details'">
+  </app-detail-cards>
+
+</div>

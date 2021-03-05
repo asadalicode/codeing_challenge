@@ -1,0 +1,74 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root {
+  --background-color: #f7f7f7;
+}
+
+.background-color {
+  background: var(--background-color);
+  @media screen and (min-width: 575px) {
+    height: auto;
+  }
+}
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  background: #fff;
+}
+
+.page-layout {
+  .text {
+    span {
+      outline: none;
+    }
+  }
+  .outline {
+    outline: none;
+    cursor: pointer;
+  }
+  .mat-card {
+    contain: content;
+    overflow-wrap: anywhere;
+    outline: none;
+    max-width: 20%;
+    .img {
+      width: 100px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+    .mat-card-header-text {
+      margin: auto;
+    }
+    .mat-divider-horizontal {
+      position: relative !important;
+    }
+    .mat-card-content {
+      text-align: justify;
+    }
+    .mat-card-content {
+      span {
+        opacity: 0.5;
+      }
+    }
+
+    //large tablet screens
+    @media screen and (max-width: 959px) {
+      min-width: calc(50% - 16px);
+    }
+
+    //xs screens
+    @media screen and (max-width: 599px) {
+      min-width: calc(100% - 16px);
+    }
+
+    //large screens
+    @media screen and (min-width: 1280px) and (max-width: 1919px) {
+      min-width: calc(33% - 16px);
+    }
+  }
+  .mat-card:hover {
+    box-shadow: 0 8px 8px 8px rgba(0, 0, 0, 0.2),
+      0 8px 8px 0 rgba(0, 0, 0, 0.14), 0 8px 8px 0 rgba(0, 0, 0, 0.12) !important;
+    transform: translate3d(0, 0, 0);
+    transition: background 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+      box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
