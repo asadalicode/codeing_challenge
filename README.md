@@ -59,3 +59,9 @@ There is a seperate module named ```artists```
 which contains 3 components, The artist home component acts as a main component which has two child components artist search and artist events.
 
 Finally, There are two re-usable components inside shared directry to minimize the html code inside the components. They are used for displaying cards. 
+
+
+## Deployment
+
+The Application is deployed to firebase. Please visit the url to have an overview of the application
+https://code-assignment-4848a.web.app/
